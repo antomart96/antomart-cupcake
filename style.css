@@ -1,0 +1,211 @@
+:root{
+    --dark_green : #0c7973;
+    --Green : #2a8878;
+    --Beige : #feebda;
+    --pink : #e782a4;
+    --pink_dark : #991d42;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}  
+body{
+    background-color: var(--Green);
+    color: #feebda;
+}
+
+        /* Mobile Css */
+/* Barre du dessus  le header*/
+header{
+    background-color: var(--dark_green);
+}
+#firstBarre{
+    display: flex;
+    justify-content: space-between;
+}
+#logo{
+    display: none;
+}
+header nav{
+    display: none;
+}
+#barreOption{
+    width: 13px;
+    color: #feebda;
+}
+
+    /* serach bootmn */
+header input{
+    background-color:  var(--Green);
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    margin: 5px;
+    width: 150px;
+}   
+header input::placeholder {
+    color: lightgray;
+}
+
+    /* corps du code */
+section{
+    text-align: center;
+}
+#logoImg{
+    width: 150px;
+    margin: 15px 0px;
+}
+article{
+    background-color:  #feebda;
+    color: #e782a4;
+    margin: 10px;
+}
+.miniature{
+   display: none;
+}
+h1, h2, h3{
+    font-family: 'Cookie', cursive;;
+}
+h1{
+    font-size: 35px;
+    padding-left: 20px;;
+    padding-right: 20px;
+}
+h2{
+    margin: 15px 0px;
+    font-size: 40px;
+    text-align: center;
+}
+h3{
+    padding-top: 20px;
+    font-size: 25px;
+    border-bottom: #e782a4 solid 1px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+p{
+    font-size: 12px;
+    font-style: italic;
+    padding: 15px;
+    font-family: 'Merriweather', serif;
+}
+#em{
+    color: #e782a4;
+}
+    /* footer */
+footer{
+    text-align: center;
+}
+
+/* tablet Css */
+
+@media screen and (min-width: 800px) {
+ 
+    #firstBarre{
+       justify-content: center;
+    }
+    header nav{
+        display: flex;
+        justify-content: space-around;
+        background-color: #feebda;
+        padding: 10px;
+    } 
+    nav a{
+        text-decoration: none; 
+        color:  #991d42;
+    }  
+    #logo{
+        display: none;
+    }
+
+    header div a{
+        display: none;
+    }
+    h1{
+        font-size: 70px;
+    }
+    h2{
+        font-size: 50px;
+    }
+    h3{
+        font-size: 30px;
+    }
+    p{
+        font-size: 15px;
+    }
+    #firstSection{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    div{
+        text-align: left;
+    }
+    #secondSection{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 40px;
+        margin-right: 40px;
+        justify-content: center;
+    }
+    article{
+        width: 250px;
+    }
+}
+/* desktop Css */
+@media screen and (min-width: 1200px) {
+  
+    #firstBarre{
+        justify-content: end;
+     }
+    header nav{
+        justify-content: flex-end;
+    }
+    nav a{
+        padding-right: 60px;
+    }
+    #secondSection{
+        display: flex; 
+        justify-content: none; 
+        flex-wrap: none;
+    }
+    article{
+        width: 400px;
+        height: 300px;
+    }
+    #firstSection{
+        display: block;
+        flex-direction:none;
+    }
+    #premierP{
+        column-count: 2;
+    }
+    #logo{
+        display: block;
+        justify-content: left;
+        position: absolute;
+        width: 100px;
+        top: 0;
+    }
+    #logoImg{
+        display: none;
+    }
+    #divSec{
+        padding: 5% 15%;
+    }
+    h1{
+        font-size: 100px;
+    }
+    .miniature{
+        display: flex;
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        transition: 0,4s;
+    }
+
+    article:hover img{
+        transform: translate(-50%, -50%) rotate(360deg) scale(1.5);
+    }
+}
